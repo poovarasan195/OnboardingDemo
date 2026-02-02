@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "616440180007",
+    "project_id": "onboardingdemo-b51f2",
+    "storage_bucket": "onboardingdemo-b51f2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:616440180007:android:b8945244e80a220af40d02",
+        "android_client_info": {
+          "package_name": "com.onboarding.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiB9OeF3B2pwh5t2mvOkVE699Np9Wx4F8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
