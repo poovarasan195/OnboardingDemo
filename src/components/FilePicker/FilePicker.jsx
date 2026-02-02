@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Modal, Text, TouchableOpacity, View, Alert } from 'react-native';
-import DocumentPicker from 'react-native-document-picker';
+import { isCancel, pick, types } from '@react-native-documents/picker';
 import { formatBytes } from '../../utils/formatters';
 import { createMockFile } from '../../utils/fileUtils';
 import { styles } from './FilePicker.styles';
@@ -76,8 +76,8 @@ export const FilePicker = ({
   const pickDocument = async () => {
     try {
       setLocalError('');
-      const results = await DocumentPicker.pick({
-        // type: [DocumentPicker.types.pdf, DocumentPicker.types.images],
+      const results = await pick({
+        // type: [types.pdf, types.images],
         allowMultipleSelection: true,
         copyTo: 'cachesDirectory',
       });
@@ -119,7 +119,7 @@ export const FilePicker = ({
         setIsOpen(false);
       }
     } catch (err) {
-      if (DocumentPicker.isCancel(err)) {
+      if (isCancel(err)) {
         // User cancelled
       } else {
         setLocalError('Failed to pick document');
